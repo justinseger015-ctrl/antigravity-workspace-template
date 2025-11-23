@@ -1,21 +1,30 @@
-# 🪐 Google Antigravity Workspace Template (Enterprise Edition)
+﻿# 🪐 Google Antigravity Workspace Template (Enterprise Edition)
 
-![Gemini 3](https://img.shields.io/badge/AI-Gemini%203-blue)
-![Agentic Workflow](https://img.shields.io/badge/Workflow-Agentic-purple)
-![Antigravity](https://img.shields.io/badge/IDE-Antigravity-orange)
-![Artifact-First](https://img.shields.io/badge/Philosophy-Artifact--First-red)
-![Docker](https://img.shields.io/badge/Docker-Ready-blue)
-![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-green)
+![License](https://img.shields.io/badge/License-MIT-green)
+![LangChain](https://img.shields.io/badge/LangChain-%F0%9F%9A%AB_Free-red)
+![Gemini](https://img.shields.io/badge/AI-Gemini_2.0_Flash-blue)
+![Architecture](https://img.shields.io/badge/Architecture-Event_Driven-purple)
+![Memory](https://img.shields.io/badge/Context-Infinite-orange)
 
-Welcome to the **Antigravity Workspace Template**. This is a production-grade starter kit for building autonomous agents on the Google Antigravity platform, fully compliant with **Antigravity Official Documentation**.
+Welcome to the **Antigravity Workspace Template**. This is a production-grade starter kit for building autonomous agents on the Google Antigravity platform, fully compliant with **Antigravity Official Documentation**—and proudly "Anti-LangChain" thanks to its minimal, transparent architecture.
+
+## ⚡️ Why Antigravity?
+
+Stop fighting with frameworks. Antigravity is a scaffold, not a library.
+
+| Feature | Traditional Frameworks (LangChain/Swarm) | Antigravity Scaffold |
+| :--- | :--- | :--- |
+| **Dependencies** | 📦 **Bloated**: Hundreds of MBs, dependency hell. | 🪶 **Zero-Bloat**: Only `google-genai` and standard lib. |
+| **Debuggability** | 🕸️ **Black Box**: 10 layers of abstraction. | 🔍 **Transparent**: Pure Python, you see every line. |
+| **Control** | 🤖 **Passive**: You follow their paradigm. | 🕹️ **Active**: You own the `Think-Act` loop. |
 
 ## 🧠 Core Philosophy: Artifact-First
 
 This workspace enforces the **Artifact-First** protocol. The Agent does not just write code; it produces tangible outputs (Artifacts) for every complex task.
 
-1.  **Planning**: `artifacts/plan_[task_id].md` is created before coding.
-2.  **Evidence**: Logs and test outputs are saved to `artifacts/logs/`.
-3.  **Visuals**: UI changes generate screenshot artifacts.
+1. **Planning**: `artifacts/plan_[task_id].md` is created before coding.
+2. **Evidence**: Logs and test outputs are saved to `artifacts/logs/`.
+3. **Visuals**: UI changes generate screenshot artifacts.
 
 ## 🛸 How It Works
 
@@ -48,28 +57,26 @@ sequenceDiagram
     deactivate Agent
 ```
 
-## ✨ Key Features
+## 🔥 Killer Features
 
--   **Official Compliance**: Fully adheres to `.antigravity/rules.md`.
--   **Auto-Configuration**: `.cursorrules` redirects to the official rules engine.
--   **Modular Architecture**: Logic separated into `src/` (Agent, Memory, Config).
--   **DevOps Ready**: Includes `Dockerfile`, `docker-compose.yml`, and CI/CD workflows.
--   **Type-Safe**: Built with `pydantic` and strict type hints.
+- 🧠 **Infinite Memory Engine**: Recursive summarization automatically compresses history. Context limits are a thing of the past.
+- 🛠️ **Universal Tool Protocol**: Generic ReAct pattern. Just register any Python function in `available_tools`, and the Agent learns to use it.
+- ⚡️ **Gemini Native**: Optimized for Gemini 2.0 Flash's speed and function calling capabilities.
 
 ## 🚀 Quick Start
 
 ### Local Development
-1.  **Install Dependencies**:
+1. **Install Dependencies**:
     ```bash
     pip install -r requirements.txt
     ```
-2.  **Run the Agent**:
+2. **Run the Agent**:
     ```bash
     python src/agent.py
     ```
 
 ### Docker Deployment
-1.  **Build & Run**:
+1. **Build & Run**:
     ```bash
     docker-compose up --build
     ```
@@ -79,15 +86,15 @@ sequenceDiagram
 ```
 .
 ├── .antigravity/       # 🛸 Official Antigravity Config
-│   └── rules.md        # Agent Rules & Permissions
+│  └── rules.md        # Agent Rules & Permissions
 ├── artifacts/          # 📂 Agent Outputs (Plans, Logs, Visuals)
 ├── .context/           # AI Knowledge Base
 ├── .github/            # CI/CD Workflows
 ├── src/                # Source Code
-│   ├── agent.py        # Main Agent Logic
-│   ├── config.py       # Settings Management
-│   ├── memory.py       # JSON Memory Manager
-│   └── tools/          # Agent Tools
+│  ├── agent.py        # Main Agent Logic
+│  ├── config.py       # Settings Management
+│  ├── memory.py       # JSON Memory Manager
+│  └── tools/          # Agent Tools
 ├── tests/              # Test Suite
 ├── .cursorrules        # Compatibility Pointer
 ├── Dockerfile          # Production Build
@@ -109,27 +116,27 @@ cd my-agent-project
 
 ### Step 2: The Magic Moment ⚡️
 Open the folder in Cursor or Google Antigravity.
--   👀 **Watch**: The IDE automatically detects `.cursorrules`.
--   🧠 **Load**: The AI silently ingests the "Antigravity Expert" persona from `.antigravity/rules.md`.
+- 👀 **Watch**: The IDE automatically detects `.cursorrules`.
+- 🧠 **Load**: The AI silently ingests the "Antigravity Expert" persona from `.antigravity/rules.md`.
 
 ### Step 3: Just Prompt (No Instructions Needed)
 You don't need to tell the AI to "be careful" or "use the src folder". It's already brainwashed to be a Senior Engineer.
 
-❌ **Old Way (Manual Prompting)**:
+**Old Way (Manual Prompting)**:
 > "Please write a snake game. Make sure to use modular code. Put files in src. Don't forget comments..."
 
-✅ **The Antigravity Way**:
+**The Antigravity Way**:
 > "Build a snake game."
 
 The AI will automatically:
-1.  🛑 **Pause**: "According to protocols, I must plan first."
-2.  📄 **Document**: Generates `artifacts/plan_snake.md`.
-3.  🔨 **Build**: Writes modular code into `src/game/` with full Google-style docstrings.
+1. 🛑 **Pause**: "According to protocols, I must plan first."
+2. 📄 **Document**: Generates `artifacts/plan_snake.md`.
+3. 🔨 **Build**: Writes modular code into `src/game/` with full Google-style docstrings.
 
 ## 🗺️ Roadmap
 
 - [x] **Phase 1: Foundation** (Scaffold, Config, Memory)
 - [x] **Phase 2: DevOps** (Docker, CI/CD)
 - [x] **Phase 3: Antigravity Compliance** (Rules, Artifacts)
-- [ ] **Phase 4: Advanced Memory** (Vector Database Integration)
-- [ ] **Phase 5: Multi-Agent Orchestration** (Swarm Protocol)
+- [x] **Phase 4: Advanced Memory** (Summary Buffer Implemented ✅)
+- [x] **Phase 5: Cognitive Architecture** (Generic Tool Dispatch Implemented ✅)

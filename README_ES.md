@@ -1,25 +1,34 @@
-# 🪐 Plantilla de Espacio de Trabajo Google Antigravity (Edición Empresarial)
+﻿# 🪐 Plantilla de Espacio de Trabajo Google Antigravity (Edición Empresarial)
 
-![Gemini 3](https://img.shields.io/badge/AI-Gemini%203-blue)
-![Flujo de Trabajo Agéntico](https://img.shields.io/badge/Workflow-Agentic-purple)
-![Antigravity](https://img.shields.io/badge/IDE-Antigravity-orange)
-![Artifact-First](https://img.shields.io/badge/Philosophy-Artifact--First-red)
-![Docker](https://img.shields.io/badge/Docker-Ready-blue)
-![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-green)
+![License](https://img.shields.io/badge/License-MIT-green)
+![LangChain](https://img.shields.io/badge/LangChain-%F0%9F%9A%AB_Free-red)
+![Gemini](https://img.shields.io/badge/AI-Gemini_2.0_Flash-blue)
+![Architecture](https://img.shields.io/badge/Architecture-Event_Driven-purple)
+![Memory](https://img.shields.io/badge/Context-Infinite-orange)
 
-Bienvenido a la **Plantilla de Espacio de Trabajo Antigravity**. Este es un kit de inicio de nivel de producción para construir agentes autónomos en la plataforma Google Antigravity, totalmente compatible con la **Documentación Oficial de Antigravity**.
+Bienvenido a la **Plantilla de Espacio de Trabajo Antigravity**. Es un kit de inicio de nivel producción para construir agentes autónomos en la plataforma Google Antigravity, totalmente alineado con la **Documentación Oficial de Antigravity** y orgullosamente “Anti-LangChain” por su arquitectura mínima y transparente.
+
+## ⚡️ ¿Por qué Antigravity?
+
+Deja de pelear con frameworks. Antigravity es un andamiaje, no una librería.
+
+| Característica | Frameworks Tradicionales (LangChain/Swarm) | Andamiaje Antigravity |
+| :--- | :--- | :--- |
+| **Dependencias** | 📦 **Inflado**: Cientos de MB, infierno de dependencias. | 🪶 **Cero-bloat**: Solo `google-genai` y librería estándar. |
+| **Depurabilidad** | 🕸️ **Caja negra**: 10 capas de abstracción. | 🔍 **Transparente**: Python puro, ves cada línea. |
+| **Control** | 🤖 **Pasivo**: Sigues su paradigma. | 🕹️ **Activo**: Tú controlas el bucle `Think-Act`. |
 
 ## 🧠 Filosofía Central: Artifact-First (Artefacto-Primero)
 
-Este espacio de trabajo impone el protocolo **Artifact-First**. El Agente no solo escribe código; produce resultados tangibles (Artefactos) para cada tarea compleja.
+Este espacio de trabajo impone el protocolo **Artifact-First**. El Agente no solo escribe código; produce artefactos tangibles para cada tarea compleja.
 
-1.  **Planificación**: Se crea `artifacts/plan_[task_id].md` antes de codificar.
-2.  **Evidencia**: Los registros de prueba y salidas se guardan en `artifacts/logs/`.
-3.  **Visuales**: Los cambios en la UI generan artefactos de captura de pantalla.
+1. **Planificación**: Se crea `artifacts/plan_[task_id].md` antes de codificar.
+2. **Evidencia**: Los registros y salidas se guardan en `artifacts/logs/`.
+3. **Visuales**: Los cambios de UI generan capturas como artefactos.
 
 ## 🛸 Cómo Funciona
 
-El agente sigue un estricto bucle "Pensar-Actuar-Reflexionar", simulando el proceso cognitivo de Gemini 3.
+El agente sigue un bucle estricto de “Pensar-Actuar-Reflexionar”, simulando el proceso cognitivo de Gemini 3.
 
 ```mermaid
 sequenceDiagram
@@ -48,28 +57,26 @@ sequenceDiagram
     deactivate Agent
 ```
 
-## ✨ Características Clave
+## 🔥 Funciones Asesinas
 
--   **Cumplimiento Oficial**: Se adhiere completamente a `.antigravity/rules.md`.
--   **Auto-Configuración**: `.cursorrules` redirige al motor de reglas oficial.
--   **Arquitectura Modular**: Lógica separada en `src/` (Agente, Memoria, Configuración).
--   **Listo para DevOps**: Incluye `Dockerfile`, `docker-compose.yml`, y flujos de trabajo CI/CD.
--   **Tipado Seguro**: Construido con `pydantic` y sugerencias de tipo estrictas.
+- 🧠 **Motor de Memoria Infinita**: La resumición recursiva comprime el historial automáticamente; los límites de contexto dejan de ser un problema.
+- 🛠️ **Protocolo Universal de Herramientas**: Patrón ReAct genérico. Registra cualquier función de Python en `available_tools` y el Agente sabrá usarla.
+- ⚡️ **Nativo de Gemini**: Optimizado para la velocidad y las llamadas a funciones de Gemini 2.0 Flash.
 
 ## 🚀 Inicio Rápido
 
 ### Desarrollo Local
-1.  **Instalar Dependencias**:
+1. **Instalar dependencias**:
     ```bash
     pip install -r requirements.txt
     ```
-2.  **Ejecutar el Agente**:
+2. **Ejecutar el Agente**:
     ```bash
     python src/agent.py
     ```
 
 ### Despliegue con Docker
-1.  **Construir y Ejecutar**:
+1. **Construir y ejecutar**:
     ```bash
     docker-compose up --build
     ```
@@ -79,15 +86,15 @@ sequenceDiagram
 ```
 .
 ├── .antigravity/       # 🛸 Configuración Oficial de Antigravity
-│   └── rules.md        # Reglas y Permisos del Agente
+│  └── rules.md        # Reglas y Permisos del Agente
 ├── artifacts/          # 📂 Salidas del Agente (Planes, Registros, Visuales)
 ├── .context/           # Base de Conocimiento de IA
 ├── .github/            # Flujos de Trabajo CI/CD
 ├── src/                # Código Fuente
-│   ├── agent.py        # Lógica Principal del Agente
-│   ├── config.py       # Gestión de Configuraciones
-│   ├── memory.py       # Gestor de Memoria JSON
-│   └── tools/          # Herramientas del Agente
+│  ├── agent.py        # Lógica Principal del Agente
+│  ├── config.py       # Gestión de Configuraciones
+│  ├── memory.py       # Gestor de Memoria JSON
+│  └── tools/          # Herramientas del Agente
 ├── tests/              # Suite de Pruebas
 ├── .cursorrules        # Puntero de Compatibilidad
 ├── Dockerfile          # Construcción de Producción
@@ -95,12 +102,12 @@ sequenceDiagram
 └── mission.md          # Objetivo del Agente
 ```
 
-## 🚀 El Flujo de Trabajo "Cero-Configuración"
+## 🚀 Flujo de Trabajo “Cero-Configuración”
 
 Deja de escribir largos prompts del sistema. Este espacio de trabajo precarga la arquitectura cognitiva de la IA por ti.
 
-### Paso 1: Clonar y Renombrar (El "Molde")
-Trata este repositorio como un molde de fábrica. Clónalo, luego renombra la carpeta con el nombre de tu proyecto.
+### Paso 1: Clonar y Renombrar (El “Molde”)
+Trata este repositorio como un molde de fábrica. Clónalo y renombra la carpeta con el nombre de tu proyecto.
 ```bash
 git clone https://github.com/study8677/antigravity-workspace-template.git my-agent-project
 cd my-agent-project
@@ -109,27 +116,27 @@ cd my-agent-project
 
 ### Paso 2: El Momento Mágico ⚡️
 Abre la carpeta en Cursor o Google Antigravity.
--   👀 **Observa**: El IDE detecta automáticamente `.cursorrules`.
--   🧠 **Carga**: La IA ingiere silenciosamente la persona de "Experto en Antigravity" desde `.antigravity/rules.md`.
+- 👀 **Observa**: El IDE detecta automáticamente `.cursorrules`.
+- 🧠 **Carga**: La IA ingiere silenciosamente la personalidad “Experto en Antigravity” desde `.antigravity/rules.md`.
 
-### Paso 3: Solo Pregunta (No Se Necesitan Instrucciones)
-No necesitas decirle a la IA que "tenga cuidado" o "use la carpeta src". Ya está programada para ser un Ingeniero Senior.
+### Paso 3: Solo Pregunta (Sin Instrucciones Extras)
+No necesitas decirle a la IA que “tenga cuidado” o “use la carpeta src”. Ya está programada para ser un Ingeniero Senior.
 
-❌ **Vieja Forma (Prompting Manual)**:
-> "Por favor escribe un juego de la serpiente. Asegúrate de usar código modular. Pon los archivos en src. No olvides los comentarios..."
+**Forma Antigua (Prompting Manual)**:
+> “Por favor escribe un juego de la serpiente. Asegúrate de usar código modular. Pon los archivos en src. No olvides los comentarios…”
 
-✅ **La Forma Antigravity**:
-> "Construye un juego de la serpiente."
+**La Forma Antigravity**:
+> “Construye un juego de la serpiente.”
 
 La IA automáticamente:
-1.  🛑 **Pausa**: "Según los protocolos, debo planificar primero."
-2.  📄 **Documenta**: Genera `artifacts/plan_snake.md`.
-3.  🔨 **Construye**: Escribe código modular en `src/game/` con docstrings completos estilo Google.
+1. 🛑 **Pausa**: “Según los protocolos, debo planificar primero.”
+2. 📄 **Documenta**: Genera `artifacts/plan_snake.md`.
+3. 🔨 **Construye**: Escribe código modular en `src/game/` con docstrings completos estilo Google.
 
 ## 🗺️ Hoja de Ruta
 
 - [x] **Fase 1: Fundación** (Andamiaje, Configuración, Memoria)
 - [x] **Fase 2: DevOps** (Docker, CI/CD)
 - [x] **Fase 3: Cumplimiento Antigravity** (Reglas, Artefactos)
-- [ ] **Fase 4: Memoria Avanzada** (Integración de Base de Datos Vectorial)
-- [ ] **Fase 5: Orquestación Multi-Agente** (Protocolo Swarm)
+- [x] **Fase 4: Memoria Avanzada** (Buffer de Resumen Implementado ✅)
+- [x] **Fase 5: Arquitectura Cognitiva** (Despacho Genérico de Herramientas Implementado ✅)
